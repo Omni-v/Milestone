@@ -1,0 +1,118 @@
+.intro
+{
+  /*make this align at the top middle of the page*/ 
+ position: absolute;
+ top:50%;
+ right:50%; 
+ transform: translate(-50%, -50%);
+ text-align: left;
+ font: small-caps 300 28px/1.25'Nintendo DS BIOS', sans-serif;
+ font-weight: bold;
+ color:black; 
+ color:rgb(255, 255, 255);  
+ height:500px;
+ width:300px;
+ }
+
+
+.header, footer, article, nav, div {
+  padding: 1.2em;
+  background: none;
+  color: rgb(255, 255, 255); 
+  }
+.column{
+  /*display images in a row horizontally*/
+  display: block;
+  width: fit-content;
+  font: small-caps 150 20px/1.5'Nintendo DS BIOS', sans-serif;
+  font-weight: bold;
+ color:white;
+  }
+
+
+
+
+#pageHeader {
+/*create text that has a glitched effect*/
+ 
+  font: small-caps 150 28px/1'Nintendo DS BIOS', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color:rgb(218, 107, 64);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+  /*move text to the center of the webpage*/
+  position: absolute;
+  top:0%;
+  right:50%;
+  
+  }
+#pageFooter {
+  grid-area: footer;
+  grid-row: right;
+   /*move the text to the center of the page*/
+  text-align: center;
+  font: small-caps 150 28px/1'Nintendo DS BIOS', sans-serif;
+ color:black; 
+ border-color:rgb(255, 255, 255); 
+ color:rgb(221, 221, 221);  
+
+ height:fit-content;
+ width:fit-content;
+
+ 
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  /*move footer up*/
+  position: absolute;
+  bottom:0%;
+  right:50%;
+
+   
+  }
+#mainArticle { 
+  grid-area: article; 
+
+
+ }
+#mainNav { 
+
+  margin-left: 50px;
+   
+  grid-area: nav;
+  text-align: left;
+  font: small-caps 200 20px/1.5'Nintendo DS BIOS', sans-serif;;
+  font-weight: bold;
+ color:black; 
+ border-color:rgb(255, 255, 255); 
+ color:rgb(221, 221, 221);  
+ border-style: double;
+ height:400px;
+ width:250px;
+ background-color: rgb(0, 0, 0); 
+  }
+#siteAds { 
+  grid-area: ads;
+  /*align on the top righto of the page*/
+ position: absolute;
+  top:17%;
+  right:0%;
+
+ 
+  } 
+
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+  body { 
+    grid-template-areas: 
+      "header"
+      "article"
+      "ads"
+      "nav"
+      "footer";
+    grid-template-rows: 80px 1fr 70px 1fr 70px;  
+    grid-template-columns: 1fr;
+ }
+
+}
